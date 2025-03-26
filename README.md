@@ -92,14 +92,29 @@ I created and assigned two test users to simulate real-world departments:
 - Enabled Remote Desktop and Remote Assistance
 - Used command line to troubleshoot DNS/login issues
 - Remotely accessed registry when needed
+![RDC](https://github.com/user-attachments/assets/c45e7be2-0660-4dac-af35-9c31a65dabda)
+![RDC in](https://github.com/user-attachments/assets/a83f89c0-e7b3-4575-a1be-ecb338998a8f)
 
 ---
 
 ## Simulated Common User Issues
-- Locked/disabled accounts
-- Expired passwords
-- Domain trust errors (PC rejoin)
-- Missing machines (rebuilt and restored)
+Locked or Disabled Accounts
+- **Issue:** User receives “account is locked out” or “account disabled” message
+- **Fix:** Unlocked or enabled accounts via Active Directory Users and Computers → User Properties → Account Tab
+
+Expired Passwords or Accounts
+- **Issue:** User can't log in due to expired password or expired account
+- **Fix:** Used `net user <username> /domain` to check status  
+- Reset password via ADUC, and enabled "User must change password at next login"  
+- Extended or removed account expiration dates as needed
+
+Domain Trust Relationship Errors
+- **Issue:** "The security database on the server does not have a computer account for this workstation"
+- **Fix:** Logged in locally as `.\\Administrator`, changed to Workgroup, restarted, then rejoined domain
+
+Missing or Deleted Workstations
+- **Issue:** Computer object deleted; users can't log in with domain accounts
+- **Fix:** Rebuilt and rejoined the PC to the domain manually using System Properties
 
 ---
 
