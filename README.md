@@ -1,4 +1,6 @@
 # Windows-Server-2022-Lab
+**Date Started:** October 23, 2024
+
 This lab simulates a real-world IT environment where I configured a Windows Server domain, managed users and permissions through Active Directory, set up shared folders, handled common user issues, and used key networking tools to troubleshoot and maintain the system.
 ## 1. Created Virtual Environment Using VirtualBox
 I used Oracle VirtualBox to create a virtual lab environment consisting of:
@@ -12,7 +14,7 @@ I used Oracle VirtualBox to create a virtual lab environment consisting of:
 ## 2. Configured Network Adapter (Internal Host-Only)
 - Set each VM to use **Adapter 1: Host-only Adapter**
 - Ensured all VMs were on the same internal network and could ping each other
-
+![Network Config](https://github.com/user-attachments/assets/e79c62dd-48f7-487f-9bcc-5b56eb2cb800)
 ---
 
 ## 3. Installed and Configured Windows Server 2022
@@ -20,30 +22,32 @@ I used Oracle VirtualBox to create a virtual lab environment consisting of:
 - Installed **Active Directory Domain Services (AD DS)**
 - Promoted to Domain Controller  
 - Domain: `server.com`
-
-📸 _Insert screenshot of setup here if available_
+![Domain settings](https://github.com/user-attachments/assets/8b769247-b083-4a19-9b23-6bb1206d76c7)
 
 ---
 
 ## 4. Set Static IP on Server
 - Server IP: `10.1.10.2`
 - Clients pointed DNS to server IP  
-✅ Enabled smooth domain joining for Windows 10 clients
-
----![Screenshot 2025-03-25 110730](https://github.com/user-attachments/assets/9bdceb0a-79a5-4d3f-80a0-60230267ee01)
+- Enabled smooth domain joining for Windows 10 clients
 
 
 ## 5. Setup Client Machines (Windows 10)
-- Installed Windows 10 on both clients
-- Joined domain `server.com` using server credentials
-- Logged in with test domain users
+- Installed Windows 10 on both clients  
+- Joined domain `server.com` using server credentials  
+- Logged in with test domain users  
 
-📸 _Insert screenshot of VM settings if available_
+I created and assigned two test users to simulate real-world departments:
+
+- **Patty** – added to the `HR` Organizational Unit (OU)
+![Patty](https://github.com/user-attachments/assets/b81ae472-7574-47f3-b9db-41c7e9b8ae2a)
+- **Helpdesk** – added to the `IT` Organizational Unit (OU) with elevated permissions (member of Admin and Domain Admin groups)
+![Helpdesk](https://github.com/user-attachments/assets/3bd6e10b-49ba-4dba-a759-dbdd3a87caf0)
 
 ---
 
 ## DOMAIN SETUP & CONFIGURATION
-- Created OUs and users in Active Directory
+- Created Organizational Units (OUs) and users in Active Directory
 - Verified domain login vs local login with `.\username`
 - Confirmed domain membership using `whoami /fqdn`
 
@@ -100,9 +104,7 @@ I used Oracle VirtualBox to create a virtual lab environment consisting of:
 - Remote Desktop  
 - Command Line Tools (`ipconfig`, `gpresult`, `net user`)  
 - Server Manager  
-- VirtualBox  
-- Jira  
-- MySQL Workbench
+- VirtualBox
 
 ---
 
