@@ -23,6 +23,7 @@ I used Oracle VirtualBox to create a virtual lab environment consisting of:
 - Promoted to Domain Controller  
 - Domain: `server.com`
 ![Domain settings](https://github.com/user-attachments/assets/8b769247-b083-4a19-9b23-6bb1206d76c7)
+![Server Manager](https://github.com/user-attachments/assets/17f84d83-b289-4d79-889f-400f75aada15)
 
 ---
 
@@ -61,9 +62,12 @@ I created and assigned two test users to simulate real-world departments:
 ---
 
 ## GROUP POLICY (GPO) COMMANDS
-- `gpresult /r` – View applied policies  
+- `gpresult /r` – View applied policies
+- `gpresult /h gpreport.html` - Export group policy report to view in browser
 - `gpupdate /force` – Refresh GPOs  
 - Created custom GPOs (e.g., disable Task Manager)
+![gpreport1](https://github.com/user-attachments/assets/5daaf62a-7a9d-4373-a3a1-aaf523d53d6d)
+![gpreport2](https://github.com/user-attachments/assets/36c7504c-6505-4661-9816-f5229121c370)
 
 ---
 
@@ -80,6 +84,7 @@ I created and assigned two test users to simulate real-world departments:
   - `\\server\HR`
   - `\\server\%username%` for personal folders
 - Applied read/write permissions via AD and GPO
+![Sharedfolder](https://github.com/user-attachments/assets/943e258e-9f3a-433e-9b75-33d6a4354258)
 
 ---
 
