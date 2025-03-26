@@ -3,8 +3,10 @@ This lab simulates a real-world IT environment where I configured a Windows Serv
 ## 1. Created Virtual Environment Using VirtualBox
 I used Oracle VirtualBox to create a virtual lab environment consisting of:
 - 1 Windows Server 2022 VM (Domain Controller)
+![Server Setup](https://github.com/user-attachments/assets/0d1adb2b-5ab4-4da7-94cb-b5beae0e3a86)
 - 2 Windows 10 Client Machines (Desktop 1 and Desktop 2)
-
+![Desktop 1](https://github.com/user-attachments/assets/34851cb1-295e-4f11-9f53-cd61700eb4bc)
+![Desktop 2](https://github.com/user-attachments/assets/0997080d-d157-4f23-a3ee-03875b860de5)
 ---
 
 ## 2. Configured Network Adapter (Internal Host-Only)
@@ -28,7 +30,8 @@ I used Oracle VirtualBox to create a virtual lab environment consisting of:
 - Clients pointed DNS to server IP  
 ✅ Enabled smooth domain joining for Windows 10 clients
 
----
+---![Screenshot 2025-03-25 110730](https://github.com/user-attachments/assets/9bdceb0a-79a5-4d3f-80a0-60230267ee01)
+
 
 ## 5. Setup Client Machines (Windows 10)
 - Installed Windows 10 on both clients
